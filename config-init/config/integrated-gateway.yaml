@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 订单服务路由配置
+        - id: placeOrder
+          uri: lb://integrated-order
+          predicates:
+            - Path=/order/create
+        # 库存服务路由配置
+        - id: queryStorage
+          uri: lb://integrated-storage
+          predicates:
+            - Path=/storage/
+        # 账户服务路由配置
+        - id: queryAccount
+          uri: lb://integrated-account
+          predicates:
+            - Path=/account/
+        # 点赞服务RocketMQ路由配置
+        - id: praiseItemRocketMQ
+          uri: lb://integrated-provider
+          predicates:
+            - Path=/praise/rocketmq
+        # 点赞服务Sentinel路由配置
+        - id: praiseItemSentinel
+          uri: lb://integrated-provider
+          predicates:
+            - Path=/praise/sentinel
+        # 查询点赞信息服务路由配置
+        - id: queryPraise
+          uri: lb://integrated-consumer
+          predicates:
+            - Path=/praise/query

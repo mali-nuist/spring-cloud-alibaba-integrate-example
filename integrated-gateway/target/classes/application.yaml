@@ -1,0 +1,31 @@
+# 配置服务器端口
+server:
+  port: 30010
+
+# Spring应用配置
+spring:
+  # 设置应用名称
+  application:
+    name: integrated-gateway
+  
+  # Spring Cloud配置
+  cloud:
+    # Nacos配置
+    nacos:
+      # 配置Nacos服务器地址、分组和文件扩展名
+      config:
+        server-addr: nacos-server:8848
+        group: integrated-example
+        file-extension: yaml
+      
+      # 服务发现配置
+      discovery:
+        # 设置服务发现用的Nacos服务器地址和分组
+        server-addr: nacos-server:8848
+        group: integrated-example
+    
+  # 配置导入
+  config:
+    # 从Nacos导入配置文件，如果不可用则忽略错误
+    import: optional:nacos:integrated-gateway.yaml
+
