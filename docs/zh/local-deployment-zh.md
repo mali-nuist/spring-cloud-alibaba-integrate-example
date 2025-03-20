@@ -42,7 +42,7 @@
 
 针对第一个场景，订单、账户、库存微服务都需要各自的数据库，而第二个场景模拟点赞也需要存储点赞信息的数据库。
 
-运行 `spring-cloud-alibaba-examples/integrated-example/config-init/sql/init.sql` 的 sql 脚本一键创建业务所需的环境以及 Seata 相关的表。
+运行 `./integrated-example/config-init/sql/init.sql` 的 sql 脚本一键创建业务所需的环境以及 Seata 相关的表。
 
 ### Nacos配置
 
@@ -63,9 +63,9 @@ bash bin/startup.sh -m standalone
 
 #### 新增配置文件
 
-在批量导入配置之前，请先修改 `spring-cloud-alibaba-examples/integrated-example/config-init/config/datasource-config.yaml` 中的数据源配置**（用户名和密码）**。
+在批量导入配置之前，请先修改 `./integrated-example/config-init/config/datasource-config.yaml` 中的数据源配置**（用户名和密码）**。
 
-之后运行 `spring-cloud-alibaba-examples/integrated-example/config-init/scripts/nacos-config-quick.sh` 来完成所有微服务配置的一键导入。
+之后运行 `./integrated-example/config-init/scripts/nacos-config-quick.sh` 来完成所有微服务配置的一键导入。
 
 ```shell
 # linux
