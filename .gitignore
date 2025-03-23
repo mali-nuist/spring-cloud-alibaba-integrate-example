@@ -1,3 +1,5 @@
 # Default ignored files
 .idea
 .mvn/settings.xml
+**/target
+**/*.iml
