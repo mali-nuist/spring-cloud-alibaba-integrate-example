@@ -1,7 +1,7 @@
 # Integrated Example
 
 ## 项目说明
-本项目由： https://github.com/alibaba/spring-cloud-alibaba/tree/2022.x/spring-cloud-alibaba-examples 修改而来。
+本项目由： [https://github.com/alibaba/spring-cloud-alibaba/tree/2023.x-dashscope-ai/spring-cloud-alibaba-examples/integrated-example] 修改而来。
 
 移除了原来项目中的非案例模块，修改了项目依赖关系，并只保留了最佳实践案例.修改过程中，保留了原有代码中所有的作者信息。
 
